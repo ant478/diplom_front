@@ -1,0 +1,17 @@
+<div class="autorisation page-template" ng-controller="UsersCtrl">
+  <div class="autorisation-form template-content">
+    <form ng-submit="submitAutorisationForm(autorisationForm)" role="form" ng-init="autorisationForm = {}">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" ng-model="autorisationForm.email" required="required" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" ng-model="autorisationForm.password" required="required" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+    </form>
+    <p class="form-message error-message" ng-bind="autorisation_success_message" ng-show="autorisation_success_message"></p>
+  </div>
+</div>
